@@ -1,0 +1,28 @@
+{
+  "name": "Timetabler",
+  "version": "1.1",
+  "description": "時間割を表示する拡張機能です。授業ごとに授業名とURLを保存し、各時間へ割り当てることができます。",
+  "permissions": ["storage", "tabs"],
+  "browser_action": {
+      "default_title": "Timetabler",
+      "default_icon": "icon.png",
+      "default_popup": "timetable.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],   // Content Scriptを実行するURL（この場合はあらゆるURLで実行）
+      "js": [ "script.js" ]   // 上記URLへのアクセス時に実行されるスクリプト
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "icons": {
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

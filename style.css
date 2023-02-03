@@ -1,0 +1,62 @@
+body
+{
+  width: max-content;
+  /*margin: 0;*/
+}
+
+#dayTable {
+    height: 30px;
+}
+
+#dayTable td {
+    width: 75px !important;
+}
+
+table tr {
+  background: linear-gradient(45deg, #e0c3fc, #8ec5fc);
+    height: 75px;
+}
+
+table td a, tr, th a {
+  text-align: center;
+  text-decoration: none;
+  font-family: "メイリオ", sans-serif;
+  color: #ffffff;
+}
+
+span.remark {
+	display: none;
+}
+a:hover span.remark {
+	display: block;
+	margin: auto;
+	padding: -0.5em;
+	position: absolute;
+	top: -20px;
+	font-size: 1px;
+	right: -10px;
+}
+
+/*以下CSSは「こぴぺっと https://copypet.jp/」さんを参考にしました*/
+a {
+	padding: 0.1em 0.3em;
+	position: relative;
+	display: inline-block;
+	transition: .3s;
+	color: #ffffff;
+}
+a::after {
+	position: absolute;
+	bottom: .3em;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 1px;
+	background-color: #ffffff;
+	opacity: 0;
+	transition: .3s;
+}
+a:hover:after {
+	bottom: 0;
+	opacity: 1;
+}
