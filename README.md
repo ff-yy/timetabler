@@ -1,2 +1,3 @@
 # timetabler
-chromium extension
+chromium extension  
+create your timetable
